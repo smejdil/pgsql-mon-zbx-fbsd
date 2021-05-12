@@ -1,0 +1,28 @@
+---
+- name: Update host Zabbix
+  zabbix_host:
+    server_url: "{{ server_url }}"
+    login_user: "{{ lookup('env','ZABBIX_USER') }}"
+    login_password: "{{ lookup('env','ZABBIX_PASSWORD') }}"
+    host_name: zabbix
+    visible_name: Zabbix server
+    description: Zabbix server with PosgreSQL
+    host_groups:
+     - Zabbix servers
+    link_templates:
+     - Template DB PostgreSQL
+    status: enabled
+    state: present
+    inventory_mode: automatic
+    interfaces:
+      - type: 1
+        main: 1
+        useip: 1
+        ip: 127.0.0.1
+        dns: "zabbix"
+        port: "10050"
+    tags:
+      - tag: OS
+        value: FreeBSD
+      - tag: App
+        value: Zabbix

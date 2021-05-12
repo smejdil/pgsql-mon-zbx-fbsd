@@ -1,0 +1,12 @@
+---
+- name: Using Zabbix collection
+  hosts: localhost
+  collections:
+    - community.zabbix
+
+  vars_files:
+    - vars/vars.yml
+
+  tasks:
+    - include_tasks: tasks/zabbix-add-template.yml
+    - include_tasks: tasks/zabbix-update-host-zabbix.yml

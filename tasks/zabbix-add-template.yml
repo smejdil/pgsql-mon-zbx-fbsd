@@ -1,0 +1,8 @@
+---
+- name: Import template PostgreSQL from XML
+  zabbix_template:
+    server_url: "{{ server_url }}"
+    login_user: "{{ lookup('env','ZABBIX_USER') }}"
+    login_password: "{{ lookup('env','ZABBIX_PASSWORD') }}"
+    template_xml: "{{ lookup('file', 'templates/template_db_postgresql.xml') }}"
+    state: present
