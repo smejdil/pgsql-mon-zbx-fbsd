@@ -6,8 +6,8 @@ Tested: FreeBSD 13.0, Zabbix 5.0.11, PostgreSQL 12.6 + TimescaleDB 2.2.1
 
 ### Packages FreeBSD
 
-- Package - py37-pip-20.2.3		Tool for installing and managing Python packages
-- Package - py37-ansible-2.9.7		Radically simple IT automation
+- Package - py38-pip-20.3.4		Tool for installing and managing Python packages
+- Package - py38-ansible-2.9.21_1	Radically simple IT automation
 
 ### How it works
 

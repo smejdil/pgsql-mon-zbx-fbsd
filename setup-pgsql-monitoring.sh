@@ -7,7 +7,7 @@ chown zabbix:zabbix /var/lib/zabbix/postgresql
 INSTALL_DIR='/var/lib/zabbix/postgresql';
 
 for i in `ls -1 postgresql/`; do
-   install -g zabbix -o zabbix -m 644 $i $INSTALL_DIR/
+   install -g zabbix -o zabbix -m 644 postgresql/$i $INSTALL_DIR/
 done
 
 # Configure zabbix_agentd.conf
